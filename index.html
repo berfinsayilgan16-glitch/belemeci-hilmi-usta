@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Belemeci Hilmi Usta | Birecik</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --brown:#351d14;
+    --brown2:#542d1d;
+    --cream:#fff7e9;
+    --cream2:#f5e8d2;
+    --gold:#d79a3d;
+    --gold-light:#e5b567;
+    --text:#30221b;
+    --muted:#75665b;
+    --white:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:var(--cream);
+    color:var(--text);
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1120px,calc(100% - 36px));
+    margin:auto;
+}
+
+/* NAVBAR */
+
+header{
+    background:var(--brown);
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 4px 20px rgba(0,0,0,.18);
+}
+
+.nav{
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:44px;
+    height:44px;
+    border:1px solid var(--gold-light);
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-family:"Playfair Display",serif;
+    font-size:20px;
+    color:var(--gold-light);
+}
+
+.brand strong{
+    display:block;
+    font-family:"Playfair Display",serif;
+    font-size:19px;
+}
+
+.brand span{
+    display:block;
+    font-size:8px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#d5b995;
+    margin-top:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    font-size:12px;
+    color:#eadfce;
+}
+
+.nav-links a{
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:var(--gold-light);
+}
+
+.order-btn{
+    background:var(--gold);
+    color:#28170f;
+    padding:12px 19px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+}
+
+/* HERO */
+
+.hero{
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(215,154,61,.13),
+            transparent 30%
+        ),
+        var(--brown);
+
+    color:white;
+    overflow:hidden;
+}
+
+.hero-grid{
+    min-height:620px;
+    display:grid;
+    grid-template-columns:1fr .9fr;
+    align-items:center;
+    gap:40px;
+}
+
+.kicker{
+    color:var(--gold-light);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:2.5px;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+h1,
+h2,
+h3{
+    font-family:"Playfair Display",serif;
+}
+
+h1{
+    font-size:clamp(52px,7vw,82px);
+    line-height:.96;
+    letter-spacing:-2px;
+}
+
+h1 em{
+    color:var(--gold-light);
+    font-style:normal;
+}
+
+.hero-text{
+    color:#ddcfbd;
+    max-width:500px;
+    font-size:15px;
+    line-height:1.8;
+    margin:25px 0 30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 21px;
+    border-radius:4px;
+    font-size:12px;
+    font-weight:700;
+    transition:.2s;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#28170f;
+}
+
+.btn-gold:hover{
+    background:var(--gold-light);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.35);
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:var(--brown);
+}
+
+/* HERO DESSERT */
+
+.hero-art{
+    height:430px;
+    position:relative;
+    display:grid;
+    place-items:center;
+}
+
+.plate{
+    width:340px;
+    height:340px;
+    border-radius:50%;
+    background:#f8e4bc;
+    border:13px solid #fff8e9;
+    box-shadow:0 25px 55px rgba(0,0,0,.45);
+    display:grid;
+    place-items:center;
+    transform:rotate(-5deg);
+}
+
+.dessert{
+    width:235px;
+    height:120px;
+    border-radius:50% 50% 42% 42%;
+
+    background:
+        repeating-linear-gradient(
+            10deg,
+            #efbd69 0 7px,
+            #a95d2d 8px 14px
+        );
+
+    box-shadow:
+        0 15px 0 #743a21,
+        0 22px 25px rgba(0,0,0,.2);
+}
+
+.hero-note{
+    position:absolute;
+    right:0;
+    bottom:40px;
+
+    background:var(--cream);
+    color:var(--brown);
+
+    padding:14px 17px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+    transform:rotate(3deg);
+    font-size:11px;
+}
+
+.hero-note strong{
+    display:block;
+    font-family:"Playfair Display",serif;
+    font-size:18px;
+}
+
+/* INFO BAR */
+
+.info{
+    background:var(--gold);
+    color:#28170f;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.info-item{
+    padding:21px 25px;
+    border-right:1px solid rgba(100,60,20,.25);
+    font-size:12px;
+}
+
+.info-item:last-child{
+    border-right:none;
+}
+
+.info-item strong{
+    display:block;
+    font-family:"Playfair Display",serif;
+    font-size:18px;
+    margin-bottom:2px;
+}
+
+/* GENERAL SECTION */
+
+.section{
+    padding:95px 0;
+}
+
+.section-head{
+    max-width:650px;
+    margin:0 auto 48px;
+    text-align:center;
+}
+
+.section-head h2{
+    font-size:46px;
+    line-height:1.05;
+}
+
+.section-head p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.7;
+    margin-top:13px;
+}
+
+/* MENU */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.product{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid #eadbc4;
+    box-shadow:0 8px 30px rgba(76,45,23,.08);
+    transition:.25s;
+}
+
+.product:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 35px rgba(76,45,23,.14);
+}
+
+.product-image{
+    height:225px;
+    position:relative;
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(255,230,160,.7),
+            transparent 25%
+        ),
+        linear-gradient(
+            145deg,
+            #8b4926,
+            #e4ac58
+        );
+}
+
+.product-image::after{
+    content:"";
+
+    position:absolute;
+
+    left:12%;
+    right:12%;
+    bottom:42px;
+
+    height:92px;
+
+    border-radius:50%;
+
+    background:
+        repeating-linear-gradient(
+            8deg,
+            #f0bd69 0 7px,
+            #ad5c2d 8px 14px
+        );
+
+    box-shadow:
+        0 18px 0 #6e371f;
+}
+
+.product-image.green{
+    background:
+        linear-gradient(
+            145deg,
+            #53613b,
+            #9a9c62
+        );
+}
+
+.product-image.green::after{
+    left:28%;
+    right:28%;
+    height:115px;
+    bottom:38px;
+
+    background:#fff0c9;
+
+    border-radius:
+        45% 45% 30% 30%;
+
+    box-shadow:
+        inset 18px 0 #e1c99e,
+        8px 17px 0 rgba(68,54,38,.4);
+}
+
+.product-image.dark{
+    background:
+        linear-gradient(
+            145deg,
+            #4a2419,
+            #b96c34
+        );
+}
+
+.product-image.dark::after{
+    left:16%;
+    right:16%;
+    height:85px;
+    bottom:52px;
+}
+
+.product-body{
+    padding:23px;
+}
+
+.product-body h3{
+    font-size:25px;
+}
+
+.product-body p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.65;
+    margin:7px 0 15px;
+    min-height:40px;
+}
+
+.price{
+    color:#a86d22;
+    font-weight:700;
+    font-size:13px;
+}
+
+/* STORY */
+
+.story{
+    background:var(--brown2);
+    color:white;
+}
+
+.story-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:80px;
+    align-items:center;
+}
+
+.story-mark{
+    height:310px;
+    border:1px solid rgba(215,162,89,.35);
+    display:grid;
+    place-items:center;
+    position:relative;
+}
+
+.story-mark::before{
+    content:"";
+    position:absolute;
+    width:215px;
+    height:215px;
+    border:1px solid rgba(215,162,89,.35);
+    border-radius:50%;
+}
+
+.story-mark span{
+    position:relative;
+    z-index:2;
+    font-family:"Playfair Display",serif;
+    font-size:75px;
+    color:var(--gold-light);
+}
+
+.story h2{
+    font-size:50px;
+    line-height:1.05;
+}
+
+.story p{
+    color:#d9cbbd;
+    font-size:14px;
+    line-height:1.9;
+    margin-top:18px;
+}
+
+/* LOCATION */
+
+.location{
+    background:#fffaf1;
+}
+
+.location-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.location h2{
+    font-size:48px;
+    line-height:1.05;
+}
+
+.location-intro{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.7;
+    margin:16px 0 28px;
+}
+
+.details{
+    display:grid;
+    gap:15px;
+}
+
+.detail{
+    border-top:1px solid #e2d6c4;
+    padding-top:14px;
+
+    display:flex;
+    gap:18px;
+
+    font-size:13px;
+}
+
+.detail-label{
+    width:70px;
+    flex:none;
+
+    color:#ad742b;
+
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+/* MAP */
+
+.map{
+    min-height:340px;
+    position:relative;
+    overflow:hidden;
+    border-radius:9px;
+
+    background-color:#d8d1bd;
+
+    background-image:
+        linear-gradient(
+            25deg,
+            #c8c0aa 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            115deg,
+            #c8c0aa 1px,
+            transparent 1px
+        );
+
+    background-size:65px 65px;
+}
+
+.road{
+    position:absolute;
+
+    width:130%;
+    height:28px;
+
+    left:-15%;
+    top:43%;
+
+    background:#eee9db;
+
+    transform:rotate(-13deg);
+}
+
+.road-two{
+    position:absolute;
+
+    width:120%;
+    height:22px;
+
+    left:-10%;
+    top:60%;
+
+    background:#eee9db;
+
+    transform:rotate(21deg);
+}
+
+.pin{
+    position:absolute;
+
+    left:50%;
+    top:48%;
+
+    width:26px;
+    height:26px;
+
+    background:#9d542b;
+
+    border-radius:
+        50% 50% 50% 0;
+
+    transform:rotate(-45deg);
+
+    box-shadow:0 5px 10px rgba(0,0,0,.2);
+}
+
+.map-card{
+    position:absolute;
+
+    left:20px;
+    bottom:20px;
+
+    background:#fffaf1;
+
+    padding:14px 17px;
+
+    font-size:11px;
+
+    box-shadow:0 7px 20px rgba(0,0,0,.15);
+}
+
+.map-card strong{
+    display:block;
+    font-family:"Playfair Display",serif;
+    font-size:18px;
+}
+
+/* CTA */
+
+.cta{
+    background:var(--gold);
+    padding:70px 0;
+    text-align:center;
+    color:#28170f;
+}
+
+.cta h2{
+    font-size:43px;
+}
+
+.cta p{
+    font-size:13px;
+    margin:8px 0 22px;
+}
+
+.cta .btn{
+    background:var(--brown);
+    color:white;
+}
+
+/* FOOTER */
+
+footer{
+    background:#28160f;
+    color:#bba998;
+    padding:25px 0;
+    font-size:10px;
+}
+
+footer .container{
+    display:flex;
+    justify-content:space-between;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+
+    width:57px;
+    height:57px;
+
+    border-radius:50%;
+
+    background:#25d366;
+    color:white;
+
+    display:grid;
+    place-items:center;
+
+    z-index:50;
+
+    font-size:25px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav{
+        height:68px;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-copy{
+        padding:70px 0 10px;
+    }
+
+    .hero-art{
+        height:340px;
+    }
+
+    .plate{
+        width:270px;
+        height:270px;
+        border-width:9px;
+    }
+
+    .dessert{
+        width:185px;
+        height:90px;
+    }
+
+    .hero-note{
+        right:7%;
+        bottom:20px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-item{
+        border-right:none;
+        border-bottom:1px solid rgba(100,60,20,.25);
+    }
+
+    .section{
+        padding:70px 0;
+    }
+
+    .products{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .story-grid,
+    .location-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .story h2,
+    .location h2{
+        font-size:41px;
+    }
+
+    .story-mark{
+        height:240px;
+    }
+}
+
+@media(max-width:520px){
+
+    .container{
+        width:calc(100% - 30px);
+    }
+
+    .brand strong{
+        font-size:16px;
+    }
+
+    .brand span{
+        font-size:7px;
+    }
+
+    .order-btn{
+        padding:9px 12px;
+    }
+
+    h1{
+        font-size:56px;
+    }
+
+    .hero-text{
+        font-size:14px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        height:240px;
+    }
+
+    .section-head h2{
+        font-size:39px;
+    }
+
+    .cta h2{
+        font-size:35px;
+    }
+
+    footer .container{
+        display:block;
+    }
+
+    footer span{
+        display:block;
+        margin-bottom:6px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<div class="container nav">
+
+    <a class="brand" href="#">
+        <div class="logo">H</div>
+
+        <div>
+            <strong>Belemeci Hilmi Usta</strong>
+            <span>Birecik · Şanlıurfa</span>
+        </div>
+    </a>
+
+    <nav class="nav-links">
+        <a href="#menu">Menü</a>
+        <a href="#hikaye">Biz Kimiz?</a>
+        <a href="#konum">Konum</a>
+    </nav>
+
+    <a class="order-btn" href="tel:05537646300">
+        Sipariş Ver
+    </a>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="container hero-grid">
+
+    <div class="hero-copy">
+
+        <div class="kicker">
+            Birecik'in Tatlı Durağı
+        </div>
+
+        <h1>
+            Bir tabak<br>
+            <em>mutluluk.</em>
+        </h1>
+
+        <p class="hero-text">
+            Çıtır dokusu, tereyağlı lezzeti ve ustalığın
+            değişmeyen tadıyla... Tatlı keyfinizi Birecik'te
+            unutulmaz bir lezzete dönüştürüyoruz.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a class="btn btn-gold" href="#menu">
+                Menüyü Keşfet ↓
+            </a>
+
+            <a class="btn btn-outline" href="tel:05537646300">
+                ☎ 0553 764 63 00
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-art">
+
+        <div class="plate">
+            <div class="dessert"></div>
+        </div>
+
+        <div class="hero-note">
+            <strong>Ustalığın tadı.</strong>
+            Her gün taze.
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- INFO -->
+<section class="info">
+
+<div class="container info-grid">
+
+    <div class="info-item">
+        <strong>Her gün açığız</strong>
+        Lezzet için bekliyoruz.
+    </div>
+
+    <div class="info-item">
+        <strong>23:00'e kadar</strong>
+        Akşam kapanış saati.
+    </div>
+
+    <div class="info-item">
+        <strong>Merkez · Birecik</strong>
+        Hastane Caddesi'ndeyiz.
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- MENU -->
+<section class="section" id="menu">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <div class="kicker">
+            Lezzetlerimiz
+        </div>
+
+        <h2>
+            Menüden favorini seç.
+        </h2>
+
+        <p>
+            Geleneksel tatları özenli hazırlık ve kaliteli
+            malzemelerle buluşturuyoruz.
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <!-- BELEME -->
+        <article class="product">
+
+            <div class="product-image"></div>
+
+            <div class="product-body">
+
+                <h3>
+                    Beleme
+                </h3>
+
+                <p>
+                    İncecik katmanlar, tereyağı ve özel
+                    dokusuyla imza lezzetimiz.
+                </p>
+
+                <div class="price">
+                    500 TL / kg
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- DONDURMA -->
+        <article class="product">
+
+            <div class="product-image green"></div>
+
+            <div class="product-body">
+
+                <h3>
+                    Dondurma
+                </h3>
+
+                <p>
+                    Tatlı keyfinize ferah bir eşlik.
+                    Günün lezzetiyle buluşun.
+                </p>
+
+                <div class="price">
+                    Güncel fiyat için arayın
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- KADAYIF -->
+        <article class="product">
+
+            <div class="product-image dark"></div>
+
+            <div class="product-body">
+
+                <h3>
+                    Burma Kadayıf
+                </h3>
+
+                <p>
+                    Çıtır katmanlar, şerbet ve bol lezzet.
+                    Tatlı severlerin klasiği.
+                </p>
+
+                <div class="price">
+                    1.200 TL / kg
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <p style="
+        text-align:center;
+        color:#938374;
+        font-size:10px;
+        margin-top:22px;
+    ">
+        * Fiyatlar demo amaçlıdır ve güncel menüye göre değişebilir.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- STORY -->
+<section class="section story" id="hikaye">
+
+<div class="container story-grid">
+
+    <div class="story-mark">
+        <span>HU</span>
+    </div>
+
+
+    <div>
+
+        <div class="kicker">
+            Biz Kimiz?
+        </div>
+
+        <h2>
+            Bir tatlıdan<br>
+            daha fazlası.
+        </h2>
+
+        <p>
+            Belemeci Hilmi Usta, Birecik'te tatlı
+            sevenlerin uğrak noktalarından biri.
+            Geleneksel tatları samimi bir esnaf anlayışıyla
+            buluşturuyor, her gün aynı özenle hazırlıyoruz.
+        </p>
+
+        <p>
+            İster kendinize küçük bir tatlı molası,
+            ister sevdiklerinize götüreceğiniz bir kutu...
+            Kapımız her zaman açık.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- LOCATION -->
+<section class="section location" id="konum">
+
+<div class="container location-grid">
+
+    <div>
+
+        <div class="kicker">
+            Bizi Bulun
+        </div>
+
+        <h2>
+            Tatlı molası<br>
+            için bekliyoruz.
+        </h2>
+
+        <p class="location-intro">
+            Birecik merkezde, Hastane Caddesi üzerinde
+            kolayca ulaşabilirsiniz.
+        </p>
+
+
+        <div class="details">
+
+            <div class="detail">
+
+                <span class="detail-label">
+                    Adres
+                </span>
+
+                <span>
+                    Merkez, Hastane Cd. No:22<br>
+                    63400 Birecik / Şanlıurfa
+                </span>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span class="detail-label">
+                    Telefon
+                </span>
+
+                <a href="tel:05537646300">
+                    0553 764 63 00
+                </a>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span class="detail-label">
+                    Saatler
+                </span>
+
+                <span>
+                    Açık · 23:00'e kadar
+                </span>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <a
+            class="btn btn-gold"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Belemeci+Hilmi+Usta+Birecik+Şanlıurfa"
+        >
+            Google Maps'te Aç →
+        </a>
+
+    </div>
+
+
+    <!-- MAP -->
+
+    <a
+        class="map"
+        target="_blank"
+        href="https://www.google.com/maps/search/?api=1&query=Belemeci+Hilmi+Usta+Birecik+Şanlıurfa"
+    >
+
+        <div class="road"></div>
+
+        <div class="road-two"></div>
+
+        <div class="pin"></div>
+
+        <div class="map-card">
+
+            <strong>
+                Belemeci Hilmi Usta
+            </strong>
+
+            Merkez · Hastane Cd. No:22
+
+            <br>
+
+            <span style="color:#9d542b">
+                Haritada görüntüle →
+            </span>
+
+        </div>
+
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+<div class="container">
+
+    <h2>
+        Tatlı bir şeyler mi arıyorsun?
+    </h2>
+
+    <p>
+        Arayın, siparişinizi hazırlayalım.
+    </p>
+
+    <a
+        class="btn"
+        href="tel:05537646300"
+    >
+        0553 764 63 00 · Hemen Ara
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="container">
+
+    <span>
+        © 2026 Belemeci Hilmi Usta
+    </span>
+
+    <span>
+        Birecik · Şanlıurfa
+    </span>
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a
+    class="whatsapp"
+    href="https://wa.me/905537646300?text=Merhaba%2C%20sipari%C5%9F%20vermek%20istiyorum."
+    target="_blank"
+    aria-label="WhatsApp"
+>
+    ☏
+</a>
+
+</body>
+</html>
